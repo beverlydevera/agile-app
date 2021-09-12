@@ -1,0 +1,239 @@
+* {
+  font-size: 14px;
+}
+
+.content-wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content-body {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid $gray;
+    background-color: $lightergray;
+    padding: 15px;
+
+    &__title {
+      h1 {
+        text-align: center;
+        color: $gray;
+      }
+    }
+}
+
+/* Headings and Texts */
+h1, h2, h3 {
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Margins */
+.ml-1 {
+  margin-left: 1em;
+}
+.ml-2 {
+  margin-left: 2em;
+}
+.ml-3 {
+  margin-left: 3em;
+}
+.mt-1 {
+  margin-top: 1em;
+}
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+/* Padding */
+.pl-2 {
+  padding-left: 2em;
+}
+.pr-2 {
+  padding-right: 2em;
+}
+
+/* Rows and Cols */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  font-size: 18px;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &--blue {
+    border: 1px solid $purple;
+    background-color: $purple;
+    color: #FFF;
+    
+    &:hover {
+      text-decoration: none;
+      background-color: #FFF;
+      color: $purple;
+    }
+  }
+  &--red {
+    border: 1px solid $red;
+    background-color: $red;
+    color: #FFF;
+    
+    &:hover {
+      text-decoration: none;
+      background-color: #FFF;
+      color: $red;
+    }
+  }
+  &--gray {
+    border: 1px solid $lightgray;
+    background-color: $lightgray;
+    color: #FFF;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #FFF;
+      color: $lightgray;
+    }
+  }
+  &--sm {
+    font-size: 16px;
+    padding: 3px 5px;
+  }
+}
+
+/* Cards */
+.card {
+  border: 1px solid $gray;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 15px 15px 15px rgb(163, 163, 163);
+
+  &--header {
+      border-bottom: 1px solid $lightergray;
+      padding: 10px;
+
+      h3 {
+          font-size: 20px;
+      }
+  }
+
+  &--body {
+      padding: 10px;
+      p:last-child, ul:last-child {
+        margin: 0;
+      }
+  }
+
+  &--footer {
+      display: flex;
+      border-top: 1px solid $lightergray;
+      padding: 10px;
+
+      .card--actions {
+          display: flex;
+          justify-content: space-between;
+      }
+
+      p:last-child {
+        margin: 0;
+      }
+  }
+}
+
+/* Modals */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  z-index: 1000;
+  overflow-y: scroll;
+
+  &--body {
+    padding: 1rem;
+  }
+}
+
+/* Forms */
+.form {
+  &-group {
+    margin-bottom: 1rem;
+
+    label {
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: .5rem;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      height: calc(2.25rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      box-shadow: inset 0 0 0 transparent;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    textarea.form-control {
+      height: auto;
+    }
+  }
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $gray; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $lightpurple; 
+}
